@@ -1,0 +1,70 @@
+/* General styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f4f4f9;
+  text-align: center;
+}
+
+h1,
+h2 {
+  margin-bottom: 10px;
+}
+
+/* ========== Part 1: CSS Animations ========== */
+.animated-btn {
+  padding: 10px 20px;
+  background: #0078d7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.animated-btn:hover {
+  transform: scale(1.1);
+  background: #005fa3;
+}
+
+/* Keyframe animation */
+.box {
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background: #ff4757;
+  border-radius: 8px;
+}
+
+/* Continuous animation */
+.pulse {
+  animation: pulseEffect 2s infinite;
+}
+
+@keyframes pulseEffect {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+}
+
+/* ========== Part 3: JS Triggered Animation ========== */
+.animate {
+  animation: slideIn 1s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
